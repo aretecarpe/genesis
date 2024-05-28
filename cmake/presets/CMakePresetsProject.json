@@ -1,0 +1,14 @@
+{
+	"version": 4,
+	"configurePresets": [
+		{
+			"name": "wrapper_presets",
+			"hidden": true,
+			"binaryDir": "${sourceDir}/build",
+			"installDir": "${sourceDir}/installed_artifacts",
+			"cacheVariables": {
+				"CMAKE_PATH": "${sourceDir}/cmake"
+			}
+		}
+	]
+}

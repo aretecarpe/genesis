@@ -1,0 +1,40 @@
+{
+	"version": 4,
+	"include": [
+		"../../CMakePresetsProject.json"
+	],
+	"configurePresets": [
+		{
+			"name": "linux-gnu-base",
+			"displayName": "LINUX-GNU",
+			"hidden": true,
+			"generator": "Unix Makefiles",
+			"inherits": "wrapper_presets",
+			"vendor": {
+				"microsoft.com/VisualStudioSettings/CMake/1.0": {
+					"hostOS": ["Linux"]
+				}
+			}
+		},
+		{
+			"name": "linux-gnu-x86_64-debug",
+			"displayName": "LINUX GNU DEBUG",
+			"inherits": "linux-gnu-base",
+			"cacheVariables": {
+				"CMAKE_BUILD_TYPE": "Debug",
+				"ARCHITECTURE": "x86_64",
+				"OS": "linux"
+			}
+		},
+		{
+			"name": "linux-gnu-x86_64-release",
+			"displayName": "LINUX GNU RELEASE",
+			"inherits": "linux-gnu-base",
+			"cacheVariables": {
+				"CMAKE_BUILD_TYPE": "Release",
+				"ARCHITECTURE": "x86_64",
+				"OS": "linux"
+			}
+		}
+	]
+}

@@ -1,0 +1,15 @@
+{
+	"name": "product-config-example",
+	"version": "0.0.1",
+	"description": "showcases how to utilize a product-config.json",
+	"type": "{static, shared, header-only, binary}",
+	"install_artifact": {true or false},
+	"source": [
+		"source_file1",
+		"source_file2"
+	],
+	"deployed_headers": [
+		"header_file1",
+		"header_file2"
+	]
+}

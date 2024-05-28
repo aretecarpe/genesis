@@ -1,0 +1,8 @@
+{
+	"version": 4,
+	"include": [
+		"../CMakePresetsProject.json",
+		"presets/linux-gnu.json",
+		"presets/windows-msvc.json"
+	]
+}

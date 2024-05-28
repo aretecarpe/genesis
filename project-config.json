@@ -1,0 +1,14 @@
+{
+	"name": "genesis",
+	"description": "Header only library containing commonly used types, traits, and abstractions for system level calls.",
+	"version": "0.0.1",
+	"cpp_standard": 17,
+	"products": [
+		"src/genesis",
+		"examples/expected",
+		"examples/object_pool",
+		"examples/stop_token",
+		"examples/inplace_stop_token",
+		"tests"
+	]
+}

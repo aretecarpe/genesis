@@ -1,0 +1,7 @@
+{
+	"name": "genesis-tests",
+	"version": "0.0.1",
+	"description": "tests for genesis",
+	"type": "binary",
+	"install_artifact": false
+}

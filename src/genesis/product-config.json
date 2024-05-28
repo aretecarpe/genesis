@@ -1,0 +1,7 @@
+{
+	"name": "genesis",
+	"version": "0.0.1",
+	"description": "Contains commonly used types, traits, and abstractions for system level calls.",
+	"type": "header-only",
+	"install_artifact": true
+}

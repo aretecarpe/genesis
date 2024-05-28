@@ -1,0 +1,6 @@
+{
+	"name": "object_pool_example",
+	"version": "0.0.1",
+	"description": "Example showcasing how to use object_pool",
+	"type": "binary"
+}

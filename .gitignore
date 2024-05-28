@@ -1,0 +1,6 @@
+build/
+installed_artifacts/
+.vscode/
+*.pdb
+*.o
+compile_commands.json

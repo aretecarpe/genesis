@@ -1,0 +1,6 @@
+{
+	"name": "stop_token_example",
+	"version": "0.0.1",
+	"description": "Example showcasing how to use stop_token",
+	"type": "binary"
+}

@@ -1,0 +1,16 @@
+{
+    "version": 3,
+    "cmakeMinimumRequired": {
+      "major": 3,
+      "minor": 21,
+      "patch": 3
+    },
+	"configurePresets": [
+		{
+			"name": "wrapper_presets",
+			"hidden": true,
+			"binaryDir": "${sourceDir}/build",
+			"installDir": "${sourceDir}/installed_artifacts"
+		}
+	]
+}

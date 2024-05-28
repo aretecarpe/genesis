@@ -1,0 +1,51 @@
+{
+	"version": 4,
+	"include": [
+		"../../CMakePresetsProject.json"
+	],
+	"configurePresets": [
+		{
+			"name": "windows-base",
+			"displayName": "Windows Base",
+			"hidden": true,
+			"inherits": "wrapper_presets",
+			"vendor": {
+				"microsoft.com/VisualStudioSettings/CMake/1.0": {
+					"hostOS": ["Windows"]
+				}
+			}
+		},
+		{
+			"name": "msvc-x86_64",
+			"displayName": "MSVC x86_64",
+			"generator": "Visual Studio 17 2022",
+			"inherits": "windows-base",
+			"cacheVariables": {
+				"ARCHITECTURE": "x86_64",
+				"OS": "windows"
+			}
+		},
+		{
+			"name": "msvc-x86_64-debug",
+			"displayName": "MSVC x86_64 Debug",
+			"generator": "Visual Studio 17 2022",
+			"inherits": "windows-base",
+			"cacheVariables": {
+				"CMAKE_BUILD_TYPE": "Debug",
+				"ARCHITECTURE": "x86_64",
+				"OS": "windows"
+			}
+		},
+		{
+			"name": "msvc-x86_64-release",
+			"displayName": "MSVC x86_64 Release",
+			"generator": "Visual Studio 17 2022",
+			"inherits": "windows-base",
+			"cacheVariables": {
+				"CMAKE_BUILD_TYPE": "Release",
+				"ARCHITECTURE": "x86_64",
+				"OS": "windows"
+			}
+		}
+	]
+}

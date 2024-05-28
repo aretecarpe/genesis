@@ -1,0 +1,10 @@
+{
+	"name": "example-project",
+	"description": "A sample project-config example",
+	"version": "1.0.0",
+	"cpp_standard": "{11, 14, 17, or 20}",
+	"products": [
+		"relative_path_to_product1",
+		"relative_path_to_product2"
+	]
+}

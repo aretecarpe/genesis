@@ -1,0 +1,1 @@
+include("${CMAKE_PATH}/product-template.cmake")

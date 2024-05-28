@@ -1,0 +1,14 @@
+cmake_minimum_required(VERSION 3.22)
+
+include("${CMAKE_SOURCE_DIR}/cmake/project-template.cmake")
+
+project(${PROJECT_NAME}
+	VERSION ${PROJECT_VERSION}
+	DESCRIPTION ${PROJECT_DESCRIPTION}
+	LANGUAGES CXX
+)
+
+foreach(product_path ${PRODUCT_LIST})
+	set(PRODUCT_SUBDIRECTORY ${product_path})
+	add_subdirectory(${product_path})
+endforeach()

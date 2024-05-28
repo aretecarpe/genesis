@@ -1,0 +1,19 @@
+name: Build and test all platforms
+on:
+  push:
+    paths-ignore:
+      - '**.md'
+      - .clang-format
+      - .gitignore
+  workflow_dispatch:
+
+jobs:
+  linux:
+    permissions:
+      contents: read
+    uses: ./.github/workflows/linux.yml
+
+  windows:
+    permissions:
+      contents: read
+    uses: ./.github/workflows/windows.yml
