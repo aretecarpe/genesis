@@ -8,23 +8,13 @@
 #include <system_error>
 
 #if GENESIS_MICROSOFT
-#define GENESIS_MICROSOFT_POSIX 1
-#define GENESIS_POSIX_INLINE_NAMESPACE
-#define GENESIS_MICROSOFT_INLINE_NAMESPACE inline
-#else
-#define GENESIS_MICROSOFT_POSIX 0
-#define GENESIS_POSIX_INLINE_NAMESPACE inline
-#define GENESIS_MICROSOFT_INLINE_NAMESPACE
+#include <windows.h>
 #endif
 
 namespace genesis {
 
-#if GENESIS_POSIX || GENESIS_MICROSOFT
-GENESIS_POSIX_INLINE_NAMESPACE namespace posix {
-
-using native_handle_type = int;
-
-constexpr native_handle_type invalid_handle = -1;
+#if GENESIS_POSIX 
+inline namespace posix {
 
 inline int last_error() noexcept { return errno; }
 
@@ -32,14 +22,9 @@ inline int last_error() noexcept { return errno; }
 #endif
 
 #if GENESIS_MICROSOFT
-#include <Windows.h>
 inline namespace microsoft {
 
-using native_handle_type = intptr_t;
-
-constexpr native_handle_type invalid_handle = 1;
-
-int last_error() noexcept { return static_cast<int>(GetLastError()); }
+inline int last_error() noexcept { return static_cast<int>(GetLastError()); }
 
 } // end namespace microsoft
 #endif
