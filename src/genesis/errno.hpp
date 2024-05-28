@@ -7,6 +7,10 @@
 #include <cstdint>
 #include <system_error>
 
+#if GENESIS_MICROSOFT
+#include <windows.h>
+#endif
+
 namespace genesis {
 
 #if GENESIS_POSIX 
@@ -18,7 +22,6 @@ inline int last_error() noexcept { return errno; }
 #endif
 
 #if GENESIS_MICROSOFT
-#include <windows.h>
 inline namespace microsoft {
 
 inline int last_error() noexcept { return static_cast<int>(GetLastError()); }
